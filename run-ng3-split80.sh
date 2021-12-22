@@ -84,7 +84,7 @@ echo
 echo "===== MONO DECODING ====="
 echo
 utils/mkgraph.sh --mono data/lang exp/mono exp/mono/graph || exit 1
-steps/decode.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/mono/graph data/valid exp/mono/decode
+#steps/decode.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/mono/graph data/valid exp/mono/decode
 steps/decode.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/mono/graph data/test exp/mono/decode
 echo
 echo "===== MONO ALIGNMENT ====="
@@ -98,7 +98,7 @@ echo
 echo "===== TRI1 (first triphone pass) DECODING ====="
 echo
 utils/mkgraph.sh data/lang exp/tri1 exp/tri1/graph || exit 1
-steps/decode.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/tri1/graph data/valid exp/tri1/decode
+#steps/decode.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/tri1/graph data/valid exp/tri1/decode
 steps/decode.sh --config conf/decode.config --nj $nj --cmd "$decode_cmd" exp/tri1/graph data/test exp/tri1/decode
 echo
 echo "===== run.sh script is finished ====="
